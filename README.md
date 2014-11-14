@@ -9,6 +9,6 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable)
 ```JavaScript
 {
   editor: 'datepicker',
-  format: 'MMM DD, YYYY' // require `moment.js` for setting format
+  format: 'MMM DD, YYYY' // require `moment.js` for format setting
 }
 ```
