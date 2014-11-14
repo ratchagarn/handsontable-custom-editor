@@ -1,11 +1,11 @@
-### Handsontable custom editor
+# Handsontable custom editor
 
 How about [handsontable](https://github.com/handsontable/jquery-handsontable)
 
 ## Avaliable editor
 - datepicker (dependency with [Pikaday](https://github.com/dbushell/Pikaday))
 
-## Example option (columns)
+### Example option (columns)
 ```JavaScript
 
 // datepicker
