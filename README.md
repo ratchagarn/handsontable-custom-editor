@@ -10,5 +10,5 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable)
 {
   editor: 'datepicker',
   format: 'MMM DD, YYYY' // require `moment` for setting format
-},
+}
 ```
