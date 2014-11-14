@@ -1,6 +1,7 @@
 # Handsontable custom editor
+Add more avaliable Editor type of handsontable.
 
-How about [handsontable](https://github.com/handsontable/jquery-handsontable)
+How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 
 ## Quick Start
 ```html
@@ -17,7 +18,7 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable)
 ```
 
 ## Avaliable editor
-- datepicker (dependency with [Pikaday](https://github.com/dbushell/Pikaday))
+- datepicker (dependency with [Pikaday](https://github.com/dbushell/Pikaday)) (because jquery-ui is very large file)
 
 ### Example option (columns)
 ```JavaScript
