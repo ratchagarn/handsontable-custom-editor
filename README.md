@@ -27,5 +27,13 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 {
   editor: 'datepicker',
   format: 'MMM DD, YYYY' // require `moment.js` for format setting
+  validator: function(value, callback) { // validator date format (MMM DD, YYYY)
+    if ( /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{2},\s\d{4}$/i.test(value) ) {
+      callback(true);
+    }
+    else {
+      callback(false);
+    }
+  }
 }
 ```
