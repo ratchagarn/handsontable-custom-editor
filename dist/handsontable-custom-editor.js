@@ -60,8 +60,8 @@ $.extend(DatePickerEditor.prototype, {
           field: this.TEXTAREA
         };
 
-    if (this.cellProperties.format) {
-      defaultOptions.format = this.cellProperties.format;
+    if (cellProperties.format) {
+      defaultOptions.format = cellProperties.format;
     }
 
     this.picker = new Pikaday( defaultOptions );
