@@ -131,7 +131,6 @@ $.extend(DatePickerEditor.prototype, {
     this.assign_datepicker = true;
 
     var defaultOptions = {
-          container: 'body',
           format: 'mmm dd, yyyy',
           selectYears: true,
           selectMonths: true
