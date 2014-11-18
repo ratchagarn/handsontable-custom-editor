@@ -53,9 +53,10 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+          'src/autocomplete.js',
           'src/datepicker.js'
         ],
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'dist/jquery.<%= pkg.name %>.js'
       }
     },
 
@@ -88,7 +89,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['dist/<%= pkg.name %>.js']
+          'dist/jquery.<%= pkg.name %>.min.js': ['dist/jquery.<%= pkg.name %>.js']
         }
       }
     }
