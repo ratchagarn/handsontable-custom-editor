@@ -11,9 +11,12 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 
 ### Version
 
-`0.2.0`
+`0.2.1`
 
 ## Change log
+
+### 0.2.1
+- Add special option `autoPosition` for dependency lib (pickadate) for `datepicker`.
 
 ### 0.2.0
 - Add editor `advance-autocomplete`.
@@ -54,7 +57,9 @@ Include dependency JS
 // datepicker
 {
   editor: 'datepicker',
-  format: 'mmm dd, yyyy'
+  options: {
+    autoPosition: true
+  },
   validator: function(value, callback) { // validator date format (mmm dd, yyyy)
     if ( /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{2},\s\d{4}$/i.test(value) ) {
       callback(true);
