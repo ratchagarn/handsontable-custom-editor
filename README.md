@@ -4,6 +4,11 @@ Add more avaliable Editor type of handsontable.
 How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 
 
+## Avaliable editor
+- datepicker (dependency with [Pickadate](https://github.com/amsul/pickadate.js)) (because jquery-ui is very large file)
+- advance-autocomplete (dependency with [devbride - jQuery Autocomplete](https://github.com/devbridge/jQuery-Autocomplete))
+
+
 ### Version
 
 `0.2.0`
@@ -42,10 +47,6 @@ Include dependency JS
 <script src="jquery.handsontable.full.js"></script>
 <script src="jquery.handsontable-custom-editor.js"></script>
 ```
-
-## Avaliable editor
-- datepicker (dependency with [Pickadate](https://github.com/amsul/pickadate.js)) (because jquery-ui is very large file)
-- advance-autocomplete (dependency with [devbride - jQuery Autocomplete](https://github.com/devbridge/jQuery-Autocomplete))
 
 ### Example option (columns)
 ```JavaScript
