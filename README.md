@@ -5,8 +5,8 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 
 
 ## Avaliable editor
-- datepicker (dependency with [Pickadate](https://github.com/amsul/pickadate.js)) (because jquery-ui is very large file)
-- advance-autocomplete (dependency with [devbride - jQuery Autocomplete](https://github.com/devbridge/jQuery-Autocomplete))
+- `datepicker` (dependency with [Pickadate](https://github.com/amsul/pickadate.js)) (because jquery-ui is very large file)
+- `advance-autocomplete` (dependency with [devbride - jQuery Autocomplete](https://github.com/devbridge/jQuery-Autocomplete))
 
 
 ### Version
