@@ -58,8 +58,15 @@ $.extend(DatePickerEditor.prototype, {
         },
         options = $.extend({}, defaultOptions, cellProperties.options || {});
 
+
+    // special option for datepicker
+    if (options.autoPosition === true && options.container === undefined) {
+      options.container = 'body';
+    }
+
     this.$input = $(this.TEXTAREA);
     this.$input.pickadate(options);
+    this.options = options;
     this.picker = this.$input.pickadate('picker');
   },
 
@@ -73,6 +80,18 @@ $.extend(DatePickerEditor.prototype, {
   open: function() {
     Handsontable.editors.TextEditor.prototype.open.call(this);
     var that = this;
+
+    // if option auto position is set then set auto position for picker
+    if (this.options.autoPosition === true) {
+      var offset = this.picker.$node.offset();
+      this.picker.$root.css({
+        top: offset.top + this.picker.$node.height() + 5,
+        left: offset.left,
+        right: 'auto',
+        bottom: 'auto'
+      });
+    }
+
     setTimeout(function() {
       that.picker.open();
     });
