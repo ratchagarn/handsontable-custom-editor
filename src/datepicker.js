@@ -1,7 +1,7 @@
 /**
  * handsontable editor - Date picker
  * ------------------------------------------------------------
- * dependency with Pikaday (https://github.com/dbushell/Pikaday)
+ * dependency with Pickadate (https://github.com/amsul/pickadate.js)
  */
 
 
@@ -28,8 +28,8 @@ $.extend(DatePickerEditor.prototype, {
 
   init: function() {
 
-    if (typeof Pikaday === 'undefined') {
-      throw new Error("Pikaday dependency not found. (https://github.com/dbushell/Pikaday)");
+    if (typeof $.fn.pickadate === 'undefined') {
+      throw new Error('Pickadate dependency not found. (https://github.com/amsul/pickadate.js)');
     }
 
     // overwrite original
@@ -44,21 +44,24 @@ $.extend(DatePickerEditor.prototype, {
    */
   
   prepare: function (td, row, col, prop, value, cellProperties) {
+
+    // overwrite original
     Handsontable.editors.TextEditor.prototype.prepare.apply(this, arguments);
 
     if (this.assign_datepicker) { return; }
     this.assign_datepicker = true;
 
-
     var defaultOptions = {
-          field: this.TEXTAREA
-        };
+          container: 'body',
+          format: 'mmm dd, yyyy',
+          selectYears: true,
+          selectMonths: true
+        },
+        options = $.extend({}, defaultOptions, cellProperties.options || {});
 
-    if (cellProperties.format) {
-      defaultOptions.format = cellProperties.format;
-    }
-
-    this.picker = new Pikaday( defaultOptions );
+    this.$input = $(this.TEXTAREA);
+    this.$input.pickadate(options);
+    this.picker = this.$input.pickadate('picker');
   },
 
 
@@ -71,11 +74,9 @@ $.extend(DatePickerEditor.prototype, {
   open: function() {
     Handsontable.editors.TextEditor.prototype.open.call(this);
     var that = this;
-    if (!this.picker.isVisible()) {
-      setTimeout(function() {
-        that.picker.show();
-      });
-    }
+    setTimeout(function() {
+      that.picker.open();
+    });
   }
 
 
