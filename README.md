@@ -3,6 +3,24 @@ Add more avaliable Editor type of handsontable.
 
 How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 
+
+### Version
+
+`0.2.0`
+
+## Change log
+
+### 0.2.0
+- Add editor `advance-autocomplete`.
+- Change dependency lib for editor `datepicker`.
+- Change distribution file name.
+
+
+### 0.1.0
+- Init project.
+- Add editor `datepicker`.
+
+
 ## Quick Start
 ```html
 // css
