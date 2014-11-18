@@ -7,18 +7,27 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 ```html
 // css
 <link rel="stylesheet" href="jquery.handsontable.full.min.css">
-<link rel="stylesheet" href="pikaday.css">
+<!--
+Include dependency CSS
+<link rel="stylesheet" href="dependency css..">
+...
+-->
 
 // js
 <script src="moment.js"></script> <!-- if you want to set date format -->
 <script src="jquery.min.js"></script>
-<script src="pikaday.js"></script>
+<!--
+Include dependency JS
+<script src="dependency js..."></script>
+...
+-->
 <script src="jquery.handsontable.full.js"></script>
-<script src="handsontable-custom-editor.js"></script>
+<script src="jquery.handsontable-custom-editor.js"></script>
 ```
 
 ## Avaliable editor
-- datepicker (dependency with [Pikaday](https://github.com/dbushell/Pikaday)) (because jquery-ui is very large file)
+- datepicker (dependency with [Pickadate](https://github.com/amsul/pickadate.js)) (because jquery-ui is very large file)
+- advance-autocomplete (dependency with [devbride - jQuery Autocomplete](https://github.com/devbridge/jQuery-Autocomplete))
 
 ### Example option (columns)
 ```JavaScript
@@ -26,8 +35,8 @@ How about [handsontable](https://github.com/handsontable/jquery-handsontable).
 // datepicker
 {
   editor: 'datepicker',
-  format: 'MMM DD, YYYY' // require `moment.js` for format setting
-  validator: function(value, callback) { // validator date format (MMM DD, YYYY)
+  format: 'mmm dd, yyyy'
+  validator: function(value, callback) { // validator date format (mmm dd, yyyy)
     if ( /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{2},\s\d{4}$/i.test(value) ) {
       callback(true);
     }

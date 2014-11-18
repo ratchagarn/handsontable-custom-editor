@@ -1,6 +1,6 @@
 {
   "name": "handsontable-custom-editor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/ratchagarn/handsontable-custom-editor",
   "authors": [
     "Ratchagarn <ratchagarn@gmail.com>"
@@ -21,7 +21,8 @@
   "dependencies": {
     "handsontable": "~0.11.4",
     "jquery": "~2.1.1",
-    "pikaday": "~1.2.0",
-    "moment": "~2.8.3"
+    "moment": "~2.8.3",
+    "devbridge-autocomplete": "~1.2.14",
+    "pickadate": "~3.5.4"
   }
 }
