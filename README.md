@@ -65,3 +65,6 @@ Include dependency JS
   }
 }
 ```
+
+### Note
+- If you use editor like `advance-autocomplete` or `datepicker` and you don't see editor dependency UI, try to update dependency lib for latest version or config option something like `container` (Example: http://amsul.ca/pickadate.js/date.htm#container)
